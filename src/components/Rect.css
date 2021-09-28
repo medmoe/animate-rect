@@ -1,10 +1,24 @@
-.rect {
-    border: 2px solid black;
-    width: 200px;
-    height: 70px;
-}
+
 .rect-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 10em;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0px 0px 10px black;
+}
+.rect {
+    position: absolute;
+    content: '';
+    width: 10px;
+    background: black;
+    top: 50%;
+    left: calc(50% - 5px);
+    transform-origin: top;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }

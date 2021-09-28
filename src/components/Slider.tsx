@@ -2,9 +2,10 @@ import React, {FC} from "react";
 
 interface IProps {
     updateSpeed: any;
+    speed: string;
 }
 
-const Slider: FC<IProps> = ({updateSpeed}) => {
+const Slider: FC<IProps> = ({updateSpeed, speed}) => {
     return (
         <div className="slidecontainer">
             <input type="range"
@@ -13,6 +14,7 @@ const Slider: FC<IProps> = ({updateSpeed}) => {
                    className="slider"
                    id="myRange"
                    onChange={updateSpeed}/>
+            <div>{speed}</div>
         </div>
 
     )

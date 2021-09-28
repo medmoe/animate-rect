@@ -1,13 +1,23 @@
 import {FC} from 'react';
 import './Rect.css';
-interface IProps {
-    degree: number;
-}
-const Rect: FC<IProps> = ({degree}) => {
-    return(
-        <div className="rect-wrapper">
-            <div className="rect" style={{transform: `rotate(${degree}deg)`}}>
+import Arm from '../components/Arm'
 
+interface data {
+    seconds: number;
+    minutes: number;
+    hours: number;
+}
+interface IProps {
+    degrees: data;
+}
+
+const Rect: FC<IProps> = ({degrees}) => {
+    return (
+        <div className="container">
+            <div className="rect-wrapper">
+                <Arm degree={degrees.hours} height={70}/>
+                <Arm degree={degrees.minutes} height={110}/>
+                <Arm degree={degrees.seconds} height={130} />
             </div>
         </div>
     )
